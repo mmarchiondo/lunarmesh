@@ -1,1 +1,16 @@
-/* Resets + typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font.body);
+  background: linear-gradient(
+    135deg,
+    var(--moon.surface.deep),
+    var(--moon.surface.base)
+  );
+  color: var(--moon.text.primary);
+  min-height: 100vh;
+}

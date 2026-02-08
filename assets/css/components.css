@@ -1,1 +1,92 @@
-/* UI components */
+.header {
+  text-align: center;
+  padding: var(--space-4) var(--space-2);
+}
+
+.logo {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  background: linear-gradient(
+    45deg,
+    var(--moon.accent.primary),
+    #fff
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--moon.glow);
+}
+
+.node-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-2);
+}
+
+.node {
+  background: rgba(0,0,0,0.35);
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--moon.accent.primary);
+}
+
+.node h3 {
+  margin-bottom: 0.5rem;
+}
+
+.node .meta {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid rgba(255,215,0,0.15);
+  font-size: 0.9rem;
+}
+
+.admin-table tr:hover {
+  background: rgba(255,215,0,0.05);
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-2);
+}
+
+.stat {
+  background: rgba(0,0,0,0.3);
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+}
+
+.constellation {
+  background: radial-gradient(
+    circle at center,
+    rgba(255,215,0,0.04),
+    rgba(0,0,0,0.95)
+  );
+  border-radius: var(--radius-lg);
+  padding: var(--space-3);
+}
+
+.star {
+  fill: var(--signal.active);
+  filter: drop-shadow(0 0 6px rgba(255,215,0,0.6));
+}
+
+.star.gateway {
+  fill: var(--accent.primary);
+  filter: drop-shadow(0 0 10px rgba(255,215,0,0.9));
+}
+
+.link {
+  stroke: rgba(255,215,0,0.25);
+  stroke-width: 1;
+}

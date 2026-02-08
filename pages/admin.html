@@ -1,1 +1,63 @@
-<!-- LAN-only Admin Control Plane -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LunarMesh -- Admin</title>
+
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/effects.css">
+</head>
+
+<body>
+
+<main class="container">
+
+  <!-- Authority Banner -->
+  <section class="section glow">
+    <h2>🏠 Local Control</h2>
+    <p><strong>LAN-only administrative view</strong></p>
+    <p data-lunar-phase></p>
+  </section>
+
+  <!-- Network Health -->
+  <section class="section">
+    <h2>🌌 Network Health</h2>
+    <div class="admin-stats">
+      <!-- injected -->
+    </div>
+  </section>
+
+  <!-- Node Table -->
+  <section class="section">
+    <h2>📡 Nodes</h2>
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Role</th>
+          <th>Status</th>
+          <th>Battery</th>
+          <th>SNR</th>
+          <th>Last Seen</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="admin-nodes"></tbody>
+    </table>
+  </section>
+
+  <!-- System Controls -->
+  <section class="section">
+    <h2>🛠 System Controls</h2>
+    <button id="toggle-public">Toggle Public Observatory</button>
+  </section>
+
+</main>
+
+<script type="module" src="/assets/js/init.js"></script>
+<script type="module" src="/assets/js/admin.js"></script>
+</body>
+</html>
